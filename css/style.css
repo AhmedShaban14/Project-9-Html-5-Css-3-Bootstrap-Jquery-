@@ -1,0 +1,869 @@
+/* General style */
+body {
+    font-family: lucida sans;
+    box-sizing: border-box
+}
+/*#7cb62f*/
+/*Padding For all sections*/
+.sections{
+    padding: 20px 0
+}
+/*Sticky Header */
+.sticky{
+    background-color: #000;
+    height: 100;
+}
+.sticky i.icon{
+    color: #fff
+}
+/*Overlay BackGround*/
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0 ;
+    right: 0;
+    background-color: rgba(0,0,0,0.6)
+}
+/*Generel Button */
+.button{
+    width: 150px;
+    height: 50px;
+    margin-left: 2%;
+    background-color: #7cb62f;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+.button:hover{
+     background-color: #fff;
+        color:#7cb62f
+}
+/*Main Section Repeated one*/
+.section-header-title{
+    font-size: 35px;
+    margin-bottom: 15px
+}
+.section-header .line{
+    background-color: #ddd;
+    height: 2px;
+    width: 15%;
+    margin: auto ;
+    position: relative;
+    margin-top: 10px
+}
+.section-header .line span{
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #7cb62f;
+    margin: auto;
+    position: relative;
+    bottom: 2px;
+}
+.section-header-desc{
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 10px
+}
+/*End Main Section Repeated one*/
+
+/********************************  Start Header  *************************************/
+header{
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 99
+}
+header .icon{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    cursor: pointer;
+    z-index: 999;
+    display: none
+}
+header .logo h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff
+}
+header nav .nav-list{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    list-style-type: none;
+}
+header nav .nav-list .nav-list-items a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+header nav .nav-list .nav-list-items a:hover{
+    color: #7cb62f;
+}
+/*Media Query*/
+@media (max-width:576px){
+    header{
+        text-align: center
+    }
+    header .icon{
+    display: block;
+    }
+    header nav .nav-list{
+        display: none;
+        padding: 0;
+        margin:0
+    }
+    header nav .nav-list .nav-list-items {
+        padding: 15px;
+    }
+    header nav .nav-list .nav-list-items:hover {
+        background-color: #000;
+        color: #7cb62f;
+    }
+    header nav .nav-list .nav-list-items:hover a {
+        color: #7cb62f;
+    }
+}
+/********************************  End Header  *************************************/
+/********************************  Start Home  *************************************/
+
+section.home{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/home/skill-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative
+}
+section.home .home-contain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff
+}
+section.home .home-contain .home-title{
+    font-size: 45px;
+    padding-bottom: 2%
+}
+section.home .home-contain .home-desc{
+    font-size: 20px;
+    padding-bottom: 2%
+}
+section.home .home-contain .parent p:last-child{
+display: none
+
+}
+
+/*Media Query*/
+@media (max-width:655px) {
+        section.home .home-contain .home-title{
+        font-size: 30px;
+    }
+section.home .home-contain .home-desc{
+    font-size: 20px;
+    padding-bottom: 2%;
+    }
+    section.home .home-contain button{
+    margin-bottom: 2%;
+    }
+}
+/********************************  End Home  *************************************/
+/********************************  Start About  *************************************/
+section.about .about-info{
+    margin-top: 2%;
+}
+section.about .about-info .about-info-title{
+    font-weight: normal;
+}
+section.about .about-info .about-info-title span{
+    font-weight: bold;
+    color:#7cb62f
+}
+section.about .about-info .about-info-desc{
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 4%
+}
+section.about .about-info button{
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #7cb62f;
+    border: 0;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2%
+}
+section.about .about-info button:hover{
+    background-color: #ddd;
+    color:#7cb62f
+}
+section.about .image{
+    overflow: hidden;
+    position: relative;
+    margin-top: 2%;
+}
+section.about .image .overlay{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+section.about .image img{
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+        z-index: 999;
+
+}
+section.about .image:hover img{
+    transform: scale(1.2);
+    
+}
+section.about .image:hover div.overlay{
+    display: none;
+}
+@media (max-width:575px) {
+    .about .about-info .about-info-title {
+        font-size: 25px;
+    }
+}
+@media (min-width:576px) and (max-width:768px) {
+    .about .about-info {
+        text-align: center
+    }
+}
+/********************************  End About  *************************************/
+/********************************  Start Services  *************************************/
+section.services{
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f7
+}
+section.services .services-info{
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 6%;
+    transition: all 0.3s ease-in-out;
+}
+section.services .services-info i{
+    color: #fff;
+    background-color: #7cb62f;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    box-shadow: 0px 2px 115px -14px rgba(0,0,0,0.38);
+    transition: all 0.3s ease-in-out;
+}
+section.services .services-info h3{
+    color: #333333;
+    transition: all 0.3s ease-in-out;
+}
+section.services .services-info .services-info-desc{
+    line-height: 1.8;
+    transition: all 0.3s ease-in-out;
+}
+section.services .services-info:hover{
+    background-color: #7cb62f
+}
+section.services .services-info:hover i{
+    background-color: #fff;
+    color: #7cb62f;
+    border: 1px solid #ddd;
+}
+section.services .services-info:hover .services-info-desc,
+section.services .services-info:hover h3{
+    color:#fff;
+}
+/********************************  End Services  *************************************/
+/********************************  Start Stat  *************************************/
+
+section.stat{
+    width: 100%;
+    height: auto;
+    background-color: #4c4c4c;
+    color: #fff;
+    padding-top: 50px
+
+
+}
+
+section.stat i {
+    background-color: #7cb62f;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid #4c4c4c;
+    box-shadow: 0px 2px 115px -14px rgba(0,0,0,0.38);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 6%
+}
+section.stat span{
+    display: block;
+    font-weight: bold;
+    font-size: 25px
+}
+/********************************  End Stat  *************************************/
+/********************************  Start portfolio  *************************************/
+section.portfolio{
+width: 100%;
+    height: auto;
+
+}
+section.portfolio ul.buttons{
+margin-bottom: 35px;
+}
+section.portfolio ul.buttons button{
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    outline: 0;
+    padding: 10px;
+    background-color: #252525;
+    color: #fff;
+}
+/******* Actice Button ********/
+.active-btn{
+    background-color: #7cb62f !important;
+}
+section.portfolio .images {
+margin-left: 40px;
+}
+section.portfolio .images img{
+width: 100%;
+}
+
+section.portfolio button.more{
+    margin: 30px 0 0 40% ;
+    width: 250px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: 0;
+    outline: 0
+}
+section.portfolio button.more:hover{
+    background-color: #7cb62f;
+    color: #fff;
+}
+@media(max-width:576px)
+{
+    section.portfolio ul.buttons {
+        display: flex;
+        justify-content: center;
+        margin:auto;
+        margin: 20px 30px 20px 0;
+    }
+    section.portfolio button.more{
+    margin: 30px 0 0 30% ;
+    
+}
+    section.portfolio .images img{
+        float: left;
+        width: 50%;
+}
+}
+@media(min-width:577px) and (max-width:798px)
+{
+    section.portfolio .images img{
+        float: left;
+        width: 50%;
+}
+}
+/********************************  End portfolio  *************************************/
+/********************************  Start Price  *************************************/
+section.price{
+background-color: #f7f7f7
+}
+section.price .price-header-parent{
+    transition: all 0.3s ease-in-out;
+}
+section.price .price-header {
+    padding: 16px;
+    background-color: #252525;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+section.price .price-header-parent .price-header span:first-child{
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+section.price .price-header-parent .price-header span:last-child{
+font-weight: normal;
+    font-size: 16px
+}
+section.price .price-header-parent span.starter{
+    display: block;
+    padding: 16px;
+    font-size: 25px;
+    background-color: #fbfbfb ;
+    border-bottom: 2px solid #f0f0f0;
+}
+section.price .price-header-parent ul{
+    margin-bottom: 0
+}
+section.price .price-header-parent .price-header-list{
+border-bottom: 1px solid #f0f0f0;
+    padding: 10px;
+    background-color: #fff;
+}
+section.price .price-header-parent button{
+    padding: 10px;
+    background-color: #252525;
+    color: #fff;
+    width: 100%;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+}
+section.price .price-header-parent:hover .price-header,
+section.price .price-header-parent:hover button
+{
+    background-color: #7cb62f;
+}
+section.price .price-header-parent:hover{
+    margin-top: -5%;
+}
+
+@media(max-width:576px) {
+section.price .price-header-parent {
+    margin:25px;
+}
+}
+@media(min-width:577px)and (max-width:798px){
+   section.price .price-header-parent {
+    margin:35px;
+}
+}
+/********************************  End Price  *************************************/
+/********************************  Start Team  *************************************/
+section.team .team-info-desc{
+    display: block;
+    margin-bottom: 20px;
+}
+section.team p.icons{
+    padding: 20px;
+    background-color: #252525;
+    position: relative;
+}
+section.team p.icons .bg{
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    transition: all 0.5s ease-in-out
+}
+section.team i {
+    color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 9999
+}
+section.team .team-info:hover .bg {
+   width: 100%;
+    background: #7cb62f;
+}
+/********************************  End Team  *************************************/
+/********************************  Start Business  *************************************/
+.business {
+    background-image: url('../images/stat/lap-stat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 250px;
+    color: #fff;
+}
+.business .bs_info {
+    margin: 40px 0
+}
+.business .bs_info .bs_title {
+    font-size: 35px;
+}
+.business .bs_info .bs_desc {
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    color: #AAA;
+    margin-bottom: 15px
+}
+.business .bs_info .bs_btn {
+    padding: 10px 20px;
+    background: #7cb62f;
+    margin-bottom: 10px;
+    border: 0;
+                transition: all 0.3s ease-in-out;
+
+}
+.business .bs_info .bs_btn:hover {
+background: #fff;
+    color: #7cb62f
+}
+@media (max-width:768px) {
+    .business {
+        height: 300px;
+    }
+    .business .bs_info .bs_title {
+        font-size: 25px;
+    }
+
+    .business .bs_info .bs_desc {
+        width: 80%; 
+        font-size: 18px;
+    }
+}
+/********************************  End Business  *************************************/
+/********************************  Start Choose Us  *************************************/
+section.choose{
+    background-color: #f7f7f7;
+}
+section.choose .choose-panel{
+    background-color: #232323;
+    color: #fff;
+}
+section.choose .choose-panel ul{
+    display: flex;
+    margin: 0
+}
+section.choose .choose-panel ul li{
+    padding:  20px;
+    cursor: pointer
+}
+
+section.choose .content {
+    background-color: #fff;
+
+    
+}
+section.choose .content .content-info{
+  border: 1px solid #ccc;
+    padding: 10px
+
+
+}
+section.choose .content .content-info img{
+width: 40%;
+    float: left;
+    padding-right: 10px
+}
+
+section.choose .content .content-info p {
+     padding: 10px;
+    color: #888;
+    line-height: 1.5
+}
+
+
+section.choose .content .content2,
+section.choose .content .content3{
+    display: none
+}
+
+
+.choose .video {
+    background: #636363;
+    padding: 135px 0;
+    color: #fff
+}
+
+.choose .video i {
+    background: #f00;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer
+}
+/********************************  End Choose Us  *************************************/
+/********************************  Start testimonial  *************************************/
+.testimonial {
+    background-color: #333333
+}
+.testimonial .section-header {
+    color: #fff
+}
+.testimonial .test-info {
+    text-align: center;
+    background-color: #141414;
+    padding: 20px 10px;
+    color: #fff
+}
+.testimonial .test-info img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin: auto
+}
+.testimonial .test-info .test-info-title {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+.testimonial .test-info .test-info-span {
+    color: #999;
+    display: block;
+    margin-bottom: 10px
+}
+.testimonial .test-info i {
+    color: #f2b100;
+    margin-bottom: 10px
+}
+.testimonial .test-info .test-info-desc {
+    color: #999
+} 
+/********************************  End testimonial  *************************************/
+/********************************  Start Blog  *************************************/
+.blog .blog-info {
+    text-align: left;
+    margin-bottom: 10px
+}
+.blog .blog-info img {
+    width: 100%
+}
+.blog .blog-info span {
+    color: #888;
+    padding-right: 10px
+}
+.blog .blog-info span i {
+    color: #7cb62f
+}
+.blog .blog-info .blog-info-desc {
+    color: #888
+}
+.blog .blog-info .blog-info-btn {
+    background: #7cb62f;
+    padding: 10px 20px;
+    color: #fff;
+    border: 0;
+        transition: all 0.3s ease-in-out;
+
+}
+.blog .blog-info .blog-info-btn:hover {
+    background: #252525;
+    color: #7cb62f;
+font-weight: bold
+
+}
+/********************************  End Blog  *************************************/
+/********************************  Start  pleasure  *************************************/
+.pleasure {
+    background: #333;
+    color: #fff;
+    padding: 100px 0;
+}
+.pleasure .pleasure-info i {
+    color: #7cb62f;
+    font-size: 40px;
+    margin-bottom: 10px
+}
+.pleasure .pleasure-info .pleasure-info-desc{ 
+    width: 60%;
+    margin: auto;
+    color: #ddd;
+    margin-bottom: 10px
+}
+.pleasure .pleasure-info .pleasure-info-desc span {
+    color: #7cb62f
+}
+.pleasure .pleasure-info .pleasure-info-text {
+    font-style: italic;
+    color: #ddd
+}
+/********************************  End pleasure  *************************************/
+/********************************  Start  next  *************************************/
+.next {
+    background: #7cb62f;
+}
+.next .next-desc {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 7px
+}
+.next .next-btn {
+    background: #333;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    outline: 0;
+    border: 0;
+            transition: all 0.3s ease-in-out;
+
+}
+.next .next-btn:hover {
+ background: #fff;
+    color: #7cb62f;
+}
+@media (max-width:768px) {
+    .next {
+        text-align: center
+    }
+}
+/********************************  End next  *************************************/
+/********************************  Start contact  *************************************/
+.contact {
+    background: #f7f7f7
+}
+.contact .contact-info .contact-info-desc {
+    color: #888;
+    line-height: 1.6
+}
+.contact .contact-info span {
+    display: block;
+    margin-bottom: 10px
+}
+.contact .contact-info span i {
+    border: 1px solid #7cb62f;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #7cb62f
+}
+.contact .contact-info span:hover i {
+    background: #7cb62f;
+    color: #fff
+}
+.contact form .form-group {
+    display: flex
+}
+.contact form .form-control:focus {
+    border-color: #888
+}
+.contact form .form-btn {
+    background: #7cb62f;
+    padding: 10px 20px;
+    margin:10px auto;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    outline: 0;
+        transition: all 0.3s ease-in-out;
+
+}
+.contact form .form-btn:hover{
+    background: #252525;
+    color: #7cb62f;
+font-weight: bold
+
+}
+@media (max-width:575px) {
+    .contact form .form-group {
+        display: block
+    }
+    .contact form .form-group input {
+        margin-bottom: 10px
+    }
+}
+/********************************  End contact  *************************************/
+/********************************  Start  footer  *************************************/
+footer {
+    background: #333;
+    color: #888
+}
+footer h3 {
+    color: #fff;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #888
+}
+footer .footer-icon  {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px !important;
+    color: #fff
+}
+footer .footer-icon:nth-of-type(1) {
+    background: #3b5998
+}
+footer .footer-icon:nth-of-type(2) {
+    background: #55acee
+}
+footer .footer-icon:nth-of-type(3) {
+    background: #dd4b39
+}
+footer .footer-icon:nth-of-type(4) {
+    background: #ff0000
+}
+footer .footer-icon:nth-of-type(5) {
+    background: #007bb5
+}
+footer ul li {
+    padding: 10px 0;
+    color: #fff;
+    border-bottom: 1px solid #888
+}
+footer button {
+    padding: 5px 10px;
+    background: #696969;
+    border: 0;
+    color: #f7f7f7;
+    margin-bottom: 5px
+}
+footer img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #888;
+    padding: 1px
+}
+/********************************  End contact  *************************************/
+/********************************  Start  copyright  *************************************/
+.copyright {
+    background: #232323;
+    color: #fff;
+}
+.copyright .copy-desc , .copyright ul {
+    margin: 0
+}
+.copyright .copy-desc i {
+    color: #7cb62f
+}
+.copyright ul {
+    display: flex;
+    justify-content: space-between
+}
+.copyright ul .nav-list-items {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
+}
+
+.copyright ul .nav-list-items a{
+ text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.copyright ul .nav-list-items a:hover{
+    color: #7cb62f
+
+}
+@media (max-width:575px) {
+    .copyright ul {
+        display: block
+    }
+}
+/********************************  End copyright  *************************************/
+/********************************  Start scrolltop  *************************************/
+.scrollTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #7cb62f;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    display: none
+}
+/********************************  End scrolltop  *************************************/
